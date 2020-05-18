@@ -10,7 +10,7 @@ export const useAnimatedScale = (scGap, delay) => {
                 var currScale = scale
                 setAnimated(true)
                 const interval = setInterval(() => {
-                    currScale += scGap * dir
+                    currScale += scGap
                     setScale(currScale)
                     if (currScale > 1) {
                         setScale(0)
@@ -60,7 +60,7 @@ export const useStyle = (w, h, scale) => {
         },
         ballStyle() {
             const left = `${w / 2 - radius}px`
-            const top = `${y + radius}px`
+            const top = `${y}px`
             const width = `${2 * radius}px`
             const height = `${2 * radius}px`
             const borderRadius = `50%`
